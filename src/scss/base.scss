@@ -11,6 +11,9 @@
   color: $SecondColor;
   box-sizing: border-box;
 }
+body {
+  margin: $base-line-spacing;
+}
 
 h1,
 h2,
