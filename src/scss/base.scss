@@ -1,18 +1,26 @@
-@import "./base.colors";
-@import "./base.poppins-font";
-@import "./base.sizes";
+@import "./base.poppins-font.scss";
+@import "./base.colors.scss";
+
+//Override Bulma variables
+$primary: $AccentColor;
+$text: $Color;
+$text-light: $SecondColor;
+$family-sans-serif: "Poppins", sans-serif;
+$border: $AccentColor;
+$border-hover: darken($AccentColor, 25%);
+$tablet: 769px;
+
+//NAVBAR
+$navbar-background-color: transparent;
+$navbar-item-color: $Color;
+$navbar-item-active-color: $AccentColor;
+$navbar-item-hover-color: $AccentColor;
+$navbar-item-hover-background-color: transparent;
+$navbar-breakpoint: $tablet;
+@import "~bulma/bulma";
 
 * {
-  font-family: "Poppins", sans-serif;
-  font-size: $font-size-regular;
-  line-height: $base-line-spacing;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: $SecondColor;
   box-sizing: border-box;
-}
-body {
-  margin: $base-line-spacing;
 }
 
 h1,
@@ -25,20 +33,20 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-largest;
+  font-size: $size-1;
 }
 h2 {
-  font-size: $font-size-larger;
+  font-size: $size-2;
 }
 h3 {
-  font-size: $font-size-large;
+  font-size: $size-3;
 }
 h4 {
-  font-size: $font-size-regular;
+  font-size: $size-4;
 }
 h5 {
-  font-size: $font-size-small;
+  font-size: $size-5;
 }
 h6 {
-  font-size: $font-size-smaller;
+  font-size: $size-6;
 }
