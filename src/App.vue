@@ -1,16 +1,15 @@
 <template>
-  <div class="app-container">
-    <section class="hero is-fullheight">
-      <div class="hero-header">
-        <NavBar/>
-      </div>
-      <div class="hero-body">
-        <h3>Nie tylko ludzie potrzebują domu</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, augue non finibus volutpat, risus ipsum tristique nulla, non interdum orci nunc eu velit. Nam eleifend augue arcu, eget eleifend eros scelerisque sed.</p>
-        <button class="button is-primary is-medium is-rounded">Adoptuj przyjaciela</button>
-      </div>
-      <div class="hero-foot"></div>
-    </section>
+  <div id="app" class="app-container hero is-fullheight">
+    <div class="hero-head">
+      <NavBar/>
+    </div>
+    <!--Hero body-->
+    <div class="hero-body">
+      <router-view></router-view>
+    </div>
+    <div class="hero-foot">
+      <!--TODO: Footer-->
+    </div>
   </div>
 </template>
 
@@ -28,24 +27,11 @@ export default {
 
 .hero {
   padding: 2rem 5rem;
-  background-image: url("./assets/dog-hero.jpg");
+  background: url("./assets/dog-hero.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.hero.is-fullheight .hero-body {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: left;
-}
-.hero-body {
-  max-width: 45rem;
-  height: auto;
-}
-.her-body,
-h3,
-p,
-button {
-  margin: 1rem;
+  background-position: 70% 0%;
 }
 </style>

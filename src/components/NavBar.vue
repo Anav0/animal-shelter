@@ -10,10 +10,10 @@
 
     <div class="navbar-menu is-active">
       <div class="navbar-end">
-        <a class="navbar-item">O schronisku</a>
-        <a class="navbar-item is-active">Nasze zwierzaki</a>
-        <a class="navbar-item">Pomoc</a>
-        <a class="navbar-item">Kontakt</a>
+        <router-link class="navbar-item" to="/" exact>O schronisku</router-link>
+        <router-link class="navbar-item" to="/pets">Nasze zwierzaki</router-link>
+        <router-link class="navbar-item" to="/help">Pomoc</router-link>
+        <router-link class="navbar-item" to="/contact">Kontakt</router-link>
       </div>
     </div>
   </nav>
