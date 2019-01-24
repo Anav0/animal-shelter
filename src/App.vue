@@ -25,13 +25,20 @@ export default {
 <style lang="scss">
 @import "./scss/base.scss";
 
-.hero {
-  padding: 2rem 5rem;
+.app-container {
   background: url("./assets/dog-hero.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-position: 70% 0%;
+}
+.hero-body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-head {
+  margin: 2rem 5rem;
 }
 </style>
