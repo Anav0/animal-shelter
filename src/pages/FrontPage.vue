@@ -28,8 +28,7 @@ export default {};
 section {
   height: 100vh;
 }
-.frontPage-container {
-}
+
 .hero.is-fullheight .hero-body {
   display: flex;
   flex-direction: column;
@@ -60,7 +59,7 @@ section {
   text-align: center;
 }
 
-@media only screen and (min-width: $desktop) {
+@media (max-width: $tablet) {
   .frontPage-about {
     display: grid;
     grid-template-columns: auto;
@@ -80,7 +79,7 @@ section {
     margin: 0rem;
   }
 }
-@media only screen and (min-width: $tablet) {
+@media (min-width: $desktop) {
   .frontPage-about {
     display: grid;
     grid-template-columns: 60% auto;
