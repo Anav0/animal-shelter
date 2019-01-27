@@ -1,13 +1,13 @@
 <template>
   <div class="frontPage-container">
     <!--Adopt section-->
-    <section class="frontPage-adopt">
+    <section class="frontPage-adopt fullscreen">
       <h3>Nie tylko ludzie potrzebują domu</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, augue non finibus volutpat, risus ipsum tristique nulla, non interdum orci nunc eu velit. Nam eleifend augue arcu, eget eleifend eros scelerisque sed.</p>
       <button class="button is-primary is-medium is-rounded">Adoptuj przyjaciela</button>
     </section>
     <!--About section-->
-    <section class="frontPage-about">
+    <section class="frontPage-about fullscreen">
       <img class="frontPage-about-dogs" src="./../assets/dogs-three.png">
       <div class="frontPage-about-text">
         <h3>O naszym schronisku</h3>
@@ -15,18 +15,64 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultricies risus, at facilisis nulla vestibulum et. Praesent quis orci sed tortor aliquam maximus eu sit amet metus. Duis congue eleifend maximus. Phasellus et sagittis ex. Aliquam eu est quis ligula vulputate pretium. In placerat nisi sem, in pellentesque enim molestie eu. Suspendisse nibh libero, ultricies eget condimentum vitae, pulvinar eget massa. Cras ullamcorper orci vitae felis congue aliquam.</p>
       </div>
     </section>
+    <!--How can you help-->
+    <section class="frontPage-help">
+      <h3>Jak możesz nam pomóc</h3>
+      <div class="frontPage-help-icons">
+        <IconAndText
+          class="frontPage-help-icon"
+          orientation="column"
+          iconSize="3x"
+          icon="syringe"
+          text="Leki"
+        ></IconAndText>
+        <IconAndText
+          class="frontPage-help-icon"
+          orientation="column"
+          iconSize="3x"
+          icon="hands-helping"
+          text="wolontariat"
+        ></IconAndText>
+        <IconAndText
+          class="frontPage-help-icon"
+          orientation="column"
+          iconSize="3x"
+          icon="baseball-ball"
+          text="zabawki"
+        ></IconAndText>
+        <IconAndText
+          class="frontPage-help-icon"
+          orientation="column"
+          iconSize="3x"
+          icon="pills"
+          text="witaminy"
+        ></IconAndText>
+        <IconAndText
+          class="frontPage-help-icon"
+          orientation="column"
+          iconSize="3x"
+          icon="bone"
+          text="Pokarm"
+        ></IconAndText>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-export default {};
+import IconAndText from "./../components/IconAndText";
+export default {
+  components: {
+    IconAndText
+  }
+};
 </script>
 
 <style scoped lang="scss">
 @import "./../scss/base.scss";
 
 section {
-  height: 100vh;
+  color: $SecondColor;
 }
 
 .hero.is-fullheight .hero-body {
@@ -38,11 +84,11 @@ section {
 .frontPage-adopt {
   max-width: 45rem;
   margin: 2rem 5rem;
+  color: $Color;
 }
 
 .frontPage-about {
   background: $About-background;
-  color: $SecondColor;
   padding: 2rem 5rem;
 }
 .frontPage-about-text {
@@ -58,7 +104,23 @@ section {
   justify-content: center;
   text-align: center;
 }
-
+.frontPage-help {
+  background: $About-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+.frontPage-help-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}
+.frontPage-help-icon {
+  padding: 2rem;
+}
 @media (max-width: $tablet) {
   .frontPage-about {
     display: grid;

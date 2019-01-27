@@ -1,5 +1,5 @@
 @import "./base.poppins-font.scss";
-@import "./base.colors.scss";
+@import "./base.colors";
 
 //Override Bulma variables
 $primary: $AccentColor;
@@ -49,4 +49,7 @@ h5 {
 }
 h6 {
   font-size: $size-6;
+}
+.fullscreen {
+  height: 100vh;
 }

@@ -5,13 +5,27 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faEnvelope,
   faPhone,
-  faMapMarkerAlt
+  faMapMarkerAlt,
+  faPills,
+  faBone,
+  faBaseballBall,
+  faSyringe,
+  faHandsHelping
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 Vue.config.productionTip = false;
 
-library.add(faEnvelope, faPhone, faMapMarkerAlt);
+library.add(
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+  faPills,
+  faBone,
+  faBaseballBall,
+  faSyringe,
+  faHandsHelping
+);
 Vue.component("fa-icon", FontAwesomeIcon);
 
 new Vue({
