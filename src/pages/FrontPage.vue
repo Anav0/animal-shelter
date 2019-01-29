@@ -4,7 +4,7 @@
     <section class="frontPage-adopt fullscreen">
       <h3>Nie tylko ludzie potrzebują domu</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, augue non finibus volutpat, risus ipsum tristique nulla, non interdum orci nunc eu velit. Nam eleifend augue arcu, eget eleifend eros scelerisque sed.</p>
-      <button class="button is-primary is-medium is-rounded">Adoptuj przyjaciela</button>
+      <button class="full-button">Adoptuj przyjaciela</button>
     </section>
     <!--About section-->
     <section class="frontPage-about fullscreen">
@@ -56,14 +56,19 @@
         ></IconAndText>
       </div>
     </section>
+    <section class="frontPage-pets fullscreen">
+      <FrontPagePetsSection></FrontPagePetsSection>
+    </section>
   </div>
 </template>
 
 <script>
 import IconAndText from "./../components/IconAndText";
+import FrontPagePetsSection from "./FrontPagePetsSection";
 export default {
   components: {
-    IconAndText
+    IconAndText,
+    FrontPagePetsSection
   }
 };
 </script>
@@ -88,7 +93,7 @@ section {
 }
 
 .frontPage-about {
-  background: $About-background;
+  background: $MainBackground;
   padding: 2rem 5rem;
 }
 .frontPage-about-text {
@@ -105,7 +110,7 @@ section {
   text-align: center;
 }
 .frontPage-help {
-  background: $About-background;
+  background: $MainBackground;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,6 +125,9 @@ section {
 }
 .frontPage-help-icon {
   padding: 2rem;
+}
+.frontPage-pets {
+  background: $SecondBackground;
 }
 @media (max-width: $tablet) {
   .frontPage-about {
