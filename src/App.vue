@@ -34,12 +34,14 @@ export default {
   background-size: cover;
   background-position: 70% 0%;
 }
+
 .hero-body {
   margin: 0;
   padding: 0;
 }
 
 .hero-head {
-  margin: 2rem 5rem;
+  margin: 0;
+  padding: 0;
 }
 </style>

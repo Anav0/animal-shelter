@@ -25,11 +25,23 @@ export default {};
 
 <style scoped lang="scss">
 @import "./../scss/base.scss";
+
+.navbar-container {
+  margin: $BaseSectionPadding;
+  padding: 0;
+}
 .navbar-menu {
   box-shadow: none;
+  text-align: center;
 }
 .navbar-brand img {
   width: 125px;
   height: auto;
+}
+
+@media (max-width: $tablet) {
+  .navbar-brand {
+    justify-content: center;
+  }
 }
 </style>

@@ -12,7 +12,7 @@
       <div class="frontPage-about-text">
         <h3>O naszym schronisku</h3>
         <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse vitae tincidunt velit. Praesent accumsan dolor sit amet justo pulvinar, id pharetra tellus rhoncus. Mauris malesuada dui vitae leo vulputate vestibulum. Suspendisse in dignissim ex. Duis cursus est nec odio dictum, nec cursus mi rutrum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultricies risus, at facilisis nulla vestibulum et. Praesent quis orci sed tortor aliquam maximus eu sit amet metus. Duis congue eleifend maximus. Phasellus et sagittis ex. Aliquam eu est quis ligula vulputate pretium. In placerat nisi sem, in pellentesque enim molestie eu. Suspendisse nibh libero, ultricies eget condimentum vitae, pulvinar eget massa. Cras ullamcorper orci vitae felis congue aliquam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultricies risus, at facilisis nulla vestibulum et. Praesent quis orci sed tortor aliquam maximus eu sit amet metus. Duis congue eleifend maximus. Phasellus et sagittis ex. Aliquam eu est quis ligula vulputate pretium. In placerat nisi sem, in pellentesque enim molestie eu.</p>
       </div>
     </section>
     <!--How can you help-->
@@ -78,6 +78,16 @@ export default {
 
 section {
   color: $SecondColor;
+  padding: $BaseSectionPadding;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+h3,
+p,
+button {
+  margin: 0.5rem;
 }
 
 .hero.is-fullheight .hero-body {
@@ -88,13 +98,12 @@ section {
 }
 .frontPage-adopt {
   max-width: 45rem;
-  margin: 2rem 5rem;
   color: $Color;
 }
 
 .frontPage-about {
   background: $MainBackground;
-  padding: 2rem 5rem;
+  max-height: 100%;
 }
 .frontPage-about-text {
   display: flex;
@@ -103,18 +112,17 @@ section {
   justify-content: left;
   align-self: center;
 }
-
+//TODO: change picture becouse is not centered right
 .frontPage-about-dogs {
   align-self: center;
   justify-content: center;
-  text-align: center;
 }
 .frontPage-help {
   background: $MainBackground;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 5rem;
+  text-align: center;
 }
 .frontPage-help-icons {
   display: flex;
@@ -130,6 +138,10 @@ section {
   background: $SecondBackground;
 }
 @media (max-width: $tablet) {
+  section {
+    margin: 0;
+    padding: 0.5rem;
+  }
   .frontPage-about {
     display: grid;
     grid-template-columns: auto;
@@ -142,11 +154,6 @@ section {
   .frontPage-about-dogs {
     grid-column: 1;
     grid-row: 1;
-  }
-  h3,
-  p,
-  button {
-    margin: 0rem;
   }
 }
 @media (min-width: $desktop) {
@@ -164,10 +171,5 @@ section {
     grid-column: 1;
     grid-row: 1;
   }
-}
-h3,
-p,
-button {
-  margin: 0.5rem;
 }
 </style>

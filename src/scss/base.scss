@@ -1,6 +1,6 @@
 @import "./base.poppins-font.scss";
+@import "./base.values";
 @import "./base.colors";
-
 //Override Bulma variables
 $primary: $AccentColor;
 $text: $Color;
@@ -32,6 +32,7 @@ h4,
 h5,
 h6 {
   font-weight: $font-weight-bold;
+  margin: 2rem;
 }
 
 h1 {
