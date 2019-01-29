@@ -15,6 +15,10 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultricies risus, at facilisis nulla vestibulum et. Praesent quis orci sed tortor aliquam maximus eu sit amet metus. Duis congue eleifend maximus. Phasellus et sagittis ex. Aliquam eu est quis ligula vulputate pretium. In placerat nisi sem, in pellentesque enim molestie eu.</p>
       </div>
     </section>
+
+    <section class="frontPage-pets fullscreen">
+      <FrontPagePetsSection></FrontPagePetsSection>
+    </section>
     <!--How can you help-->
     <section class="frontPage-help">
       <h3>Jak możesz nam pomóc</h3>
@@ -55,9 +59,6 @@
           text="Pokarm"
         ></IconAndText>
       </div>
-    </section>
-    <section class="frontPage-pets fullscreen">
-      <FrontPagePetsSection></FrontPagePetsSection>
     </section>
   </div>
 </template>
@@ -122,6 +123,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .frontPage-help-icons {
