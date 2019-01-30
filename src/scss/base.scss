@@ -8,8 +8,7 @@ $text-light: $SecondColor;
 $family-sans-serif: "Poppins", sans-serif;
 $border: $AccentColor;
 $border-hover: darken($AccentColor, 25%);
-$tablet: 769px;
-
+$tablet: 801px;
 //NAVBAR
 $navbar-background-color: transparent;
 $navbar-item-color: $Color;
@@ -100,4 +99,22 @@ h6 {
 
 .full-button:hover {
   opacity: 0.75;
+}
+
+.round-button {
+  text-align: center;
+  border-radius: 90px;
+  background-color: transparent;
+  border: 2px solid $AccentColor;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: $Color;
+  transition: all 0.2s;
+  font-size: 1em;
+}
+
+.round-button:hover {
+  background-color: $AccentColor;
+  color: white;
 }

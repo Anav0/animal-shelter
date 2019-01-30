@@ -10,7 +10,9 @@ import {
   faBone,
   faBaseballBall,
   faSyringe,
-  faHandsHelping
+  faHandsHelping,
+  faMars,
+  faVenus
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -24,7 +26,9 @@ library.add(
   faBone,
   faBaseballBall,
   faSyringe,
-  faHandsHelping
+  faHandsHelping,
+  faMars,
+  faVenus
 );
 Vue.component("fa-icon", FontAwesomeIcon);
 

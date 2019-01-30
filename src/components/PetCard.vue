@@ -1,25 +1,42 @@
 <template>
   <div class="petCard-container white-box">
     <div class="petCard-image">
-      <img :src="image">
+      <img :src="pet.image">
     </div>
-    <h5 class="petCard-name">{{this.name}}</h5>
-    <button class="petCard-button main-button">Więcej</button>
+    <h5 class="petCard-name">{{this.pet.name}}</h5>
+    <button @click="showDetails" class="petCard-button main-button">Więcej</button>
+
+    <div class="modal" :class="{'is-active':showModal}">
+      <div class="modal-background"></div>
+      <div clas="modal-content">
+        <pet-details @click="showDetails" :pet="pet"></pet-details>
+      </div>
+      <button @click="showDetails" class="modal-close is-large round-button" aria-label="Close"></button>
+    </div>
   </div>
 </template>
 
 <script>
+import PetDetails from "./../components/PetDetails";
+
 export default {
+  components: {
+    PetDetails
+  },
+  data() {
+    return {
+      showModal: false
+    };
+  },
   props: {
-    name: {
-      type: String,
+    pet: {
+      type: Object,
       required: true
-    },
-    image: {
-      type: String,
-      //TODO: change this tmp doggo image
-      default:
-        "https://img3.androidappsapk.co/300/d/b/2/com.doggomoji.doggojumpo.png"
+    }
+  },
+  methods: {
+    showDetails() {
+      return (this.showModal = !this.showModal);
     }
   }
 };
@@ -61,5 +78,11 @@ export default {
 }
 .box {
   padding: 0;
+}
+
+@media (min-width: $tablet) {
+  .modal-close {
+    display: none;
+  }
 }
 </style>

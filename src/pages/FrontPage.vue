@@ -16,9 +16,10 @@
       </div>
     </section>
 
-    <section class="frontPage-pets fullscreen">
+    <section class="frontPage-pets">
       <FrontPagePetsSection></FrontPagePetsSection>
     </section>
+
     <!--How can you help-->
     <section class="frontPage-help">
       <h3>Jak możesz nam pomóc</h3>
