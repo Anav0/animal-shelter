@@ -3,6 +3,7 @@ import Router from "vue-router";
 import FrontPage from "./pages/FrontPage.vue";
 import PetsPage from "./pages/PetsPage.vue";
 import ContactPage from "./pages/ContactPage.vue";
+import AdoptionPage from "./pages/AdoptionPage.vue";
 Vue.use(Router);
 
 const help = { template: "<p>Help page</p>" };
@@ -30,6 +31,11 @@ export default new Router({
       path: "/contact",
       name: "ContactPage",
       component: ContactPage
+    },
+    {
+      path: "/adoption",
+      name: "AdoptionPage",
+      component: AdoptionPage
     }
   ]
 });

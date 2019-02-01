@@ -76,7 +76,7 @@ section {
   height: 100%;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 h4,
 h3 {

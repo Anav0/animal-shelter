@@ -1,6 +1,7 @@
 @import "./base.poppins-font.scss";
 @import "./base.values";
 @import "./base.colors";
+
 //Override Bulma variables
 $primary: $AccentColor;
 $text: $Color;
@@ -9,6 +10,7 @@ $family-sans-serif: "Poppins", sans-serif;
 $border: $AccentColor;
 $border-hover: darken($AccentColor, 25%);
 $tablet: 801px;
+
 //NAVBAR
 $navbar-background-color: transparent;
 $navbar-item-color: $Color;
@@ -122,4 +124,42 @@ h6 {
   background-color: $AccentColor;
   color: white;
   border: none;
+}
+ul .colored-list {
+  list-style-type: none;
+}
+.colored-list li::before {
+  content: "\2022";
+  color: $AccentColor;
+
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.nested-list li {
+  margin-left: 1rem;
+}
+
+.page {
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+  ul {
+    list-style-type: desc;
+    list-style-position: inside;
+  }
+  li {
+    padding: 0.25rem;
+  }
+  p,
+  ul {
+    margin: 0.5rem 0;
+  }
 }

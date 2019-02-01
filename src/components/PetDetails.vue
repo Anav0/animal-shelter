@@ -9,7 +9,7 @@
       </div>
       <h6>{{this.pet.race}}</h6>
       <p>{{this.pet.desc}}</p>
-      <ul>
+      <ul class="colored-list">
         <li>Wiek: {{this.age}}</li>
         <li>Zaszczepiony: {{this.pet.isVaccinated ? "Tak":"Nie"}}</li>
         <li>Odrobaczony: {{this.pet.isDeWormed ? "Tak":"Nie"}}</li>
@@ -98,13 +98,6 @@ ul {
 li {
   padding: 0;
   margin: 0.5rem 0;
-}
-ul li::before {
-  content: "\2022";
-  color: $AccentColor;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
 }
 
 h3,

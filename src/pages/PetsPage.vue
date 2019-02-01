@@ -1,6 +1,6 @@
 <template>
   <div class="petsPage-container">
-    <h4>Nasi przyjaciele którzy szukają domu</h4>
+    <h3>Nasi przyjaciele którzy szukają domu</h3>
     <paginate name="pets" :list="pets" :per="8">
       <div class="petsPage-pets-list">
         <PetCard class="petsPage-petCard" v-for="(pet,i) in paginated('pets')" :key="i" :pet="pet"></PetCard>
@@ -82,5 +82,8 @@ export default {
 }
 .paginate-links li.active {
   @extend .pressed;
+}
+h3 {
+  margin: 2rem;
 }
 </style>
