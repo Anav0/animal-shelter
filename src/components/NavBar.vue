@@ -5,6 +5,7 @@
     aria-label="main navigation"
   >
     <div class="navbar-brand">
+      <!--TODO: change logo becouse the dog is's not visible-->
       <img src="./../../public/logo.png">
     </div>
 

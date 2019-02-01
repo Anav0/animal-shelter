@@ -2,10 +2,10 @@ import Vue from "vue";
 import Router from "vue-router";
 import FrontPage from "./pages/FrontPage.vue";
 import PetsPage from "./pages/PetsPage.vue";
+import ContactPage from "./pages/ContactPage.vue";
 Vue.use(Router);
 
 const help = { template: "<p>Help page</p>" };
-const contact = { template: "<p>About page</p>" };
 
 export default new Router({
   mode: "history",
@@ -29,7 +29,7 @@ export default new Router({
     {
       path: "/contact",
       name: "ContactPage",
-      component: contact
+      component: ContactPage
     }
   ]
 });
