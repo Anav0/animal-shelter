@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-container">
+  <footer class="footer-container">
     <h4 class="footer-header1 footer-common-padding">Pytania i sugestie</h4>
 
     <div class="footer-common-padding footer-email footer-icontext-container">
@@ -22,7 +22,9 @@
       <fa-icon size="lg" class="footer-icon" icon="map-marker-alt"></fa-icon>
       <address>40-313 Katowice ul. Milowicka 1B</address>
     </div>
-  </div>
+
+    <span>Wykonał Igor Motyka</span>
+  </footer>
 </template>
 
 <script>
@@ -35,31 +37,27 @@ export default {
 @import "./../scss/base.scss";
 
 .footer-container {
-  grid-column: 1;
-  grid-row: 1;
-
-  justify-items: flex-start; //X axis
-  align-items: center; //Y axis
-
-  justify-content: center; //X axis for whole grid
-  align-content: center; //Y axis for whole grid
-
-  grid-gap: 0.5rem 10vw;
-
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  grid-gap: 0.5rem 4rem;
   margin: 5vh;
+
+  justify-items: start;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-header1 {
   grid-column: 1;
   grid-row: 1;
+  margin: 0;
 }
 
 .footer-header2 {
   grid-column: 2;
   grid-row: 1;
+  margin: 0;
 }
 
 .footer-email {
@@ -100,19 +98,29 @@ export default {
 
 .footer-icon {
   margin-right: 1rem;
-  margin-left: 2rem;
 }
 .footer-icontext-container {
   display: flex;
   align-items: center;
   justify-content: start;
 }
-
+span {
+  grid-row: 5/6;
+  grid-column: 1/3;
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+}
 @media (max-width: $tablet) {
   .footer-container {
     display: flex;
     flex-direction: column;
-    align-items: start;
+
+    & div,
+    h4,
+    span {
+      width: 100%;
+    }
   }
 }
 </style>

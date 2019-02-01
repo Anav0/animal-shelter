@@ -10,17 +10,18 @@
       <h6>{{this.pet.race}}</h6>
       <p>{{this.pet.desc}}</p>
       <ul>
-        <li>Wiek: {{this.pet.age}}</li>
+        <li>Wiek: {{this.age}}</li>
         <li>Zaszczepiony: {{this.pet.isVaccinated ? "Tak":"Nie"}}</li>
         <li>Odrobaczony: {{this.pet.isDeWormed ? "Tak":"Nie"}}</li>
         <li>Zaczipowany: {{this.pet.isChiped ? "Tak":"Nie"}}</li>
-        <li>Choroby: {{this.pet.diseases}}</li>
+        <li v-show="pet.diseases">Choroby: {{this.pet.diseases}}</li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+import moment from "moment";
 export default {
   props: {
     pet: {
@@ -31,6 +32,19 @@ export default {
   methods: {
     closeModal() {
       this.$emit("click");
+    }
+  },
+  computed: {
+    age() {
+      const currentDate = moment();
+      const formatedBirthDate = moment(this.pet.birth_date);
+      const diffYears = currentDate.diff(formatedBirthDate, "years");
+      if (diffYears < 1) {
+        const diffMonths = currentDate.diff(formatedBirthDate, "months");
+        if (diffMonths < 1) {
+          return currentDate.diff(formatedBirthDate, "days") + " dni";
+        } else return diffMonths + " miesiące";
+      } else return diffYears + " lat";
     }
   }
 };

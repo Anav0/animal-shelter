@@ -4,7 +4,7 @@
     <div class="petsSection-example-dogs">
       <PetCard class="petsSection-dog" v-for="(pet, i) in pets" :pet="pet" :key="i"></PetCard>
     </div>
-    <button class="full-button">Poznaj resztę</button>
+    <router-link tag="button" to="/pets" class="full-button">Poznaj resztę</router-link>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
           image:
             "https://images.unsplash.com/photo-1529429617124-95b109e86bb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
           isMale: true,
-          age: "13 lat",
+          birth_date: "12/11/2018",
           isVaccinated: true,
           isDeWormed: false,
           isChiped: false,
@@ -34,11 +34,10 @@ export default {
           race: "Pug",
           desc: "Gryzie inne pieski",
           isMale: true,
-          age: "8 lat",
+          birth_date: "5/6/2014",
           isVaccinated: true,
           isDeWormed: true,
           isChiped: false,
-
           name: "Bucket",
           image:
             "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
@@ -48,7 +47,7 @@ export default {
           race: "nieznana",
           desc: "Uwielbia siedzieć na kanapie i wygrzewać swoją pupcię",
           isMale: false,
-          age: "4 lat",
+          birth_date: "1/30/2019",
           isVaccinated: true,
           isDeWormed: true,
           isChiped: false,

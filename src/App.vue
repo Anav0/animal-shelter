@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import "./scss/base.scss";
 
 .app-container {
@@ -33,11 +33,15 @@ export default {
   -o-background-size: cover;
   background-size: cover;
   background-position: 70% 0%;
+  margin: 0;
+  padding: 0;
 }
-
 .hero-body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-head {

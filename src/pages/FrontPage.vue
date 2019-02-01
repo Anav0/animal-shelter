@@ -4,7 +4,11 @@
     <section class="frontPage-adopt fullscreen">
       <h3>Nie tylko ludzie potrzebują domu</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, augue non finibus volutpat, risus ipsum tristique nulla, non interdum orci nunc eu velit. Nam eleifend augue arcu, eget eleifend eros scelerisque sed.</p>
-      <button class="full-button">Adoptuj przyjaciela</button>
+      <router-link
+        tag="button"
+        class="frontPage-adopt-button full-button"
+        to="/pets"
+      >Adoptuj przyjaciela</router-link>
     </section>
     <!--About section-->
     <section class="frontPage-about fullscreen">
@@ -88,16 +92,10 @@ section {
 }
 h3,
 p,
-button {
+.frontPage-adopt-button {
   margin: 0.5rem;
 }
 
-.hero.is-fullheight .hero-body {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: left;
-}
 .frontPage-adopt {
   max-width: 45rem;
   color: $Color;

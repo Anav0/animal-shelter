@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import VuePaginate from "vue-paginate";
+
 import {
   faEnvelope,
   faPhone,
@@ -17,7 +19,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 Vue.config.productionTip = false;
-
+Vue.use(VuePaginate);
 library.add(
   faEnvelope,
   faPhone,
