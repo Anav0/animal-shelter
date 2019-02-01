@@ -3,7 +3,10 @@
     <!--Adopt section-->
     <section class="frontPage-adopt fullscreen">
       <h3>Nie tylko ludzie potrzebują domu</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, augue non finibus volutpat, risus ipsum tristique nulla, non interdum orci nunc eu velit. Nam eleifend augue arcu, eget eleifend eros scelerisque sed.</p>
+      <p>
+        Miejskie Schronisko dla bezdomnych zwierząt w Katowicach umiejscowione jest z dala od zamieszkałej części Dąbrówki Małej.
+        Otoczone zielenią wtapia się w krajobraz na obrzeżach, z dala od zgiełku wielkiego miasta. Zwierzęta mają tu ciszę i spokój.
+      </p>
       <router-link
         tag="button"
         class="frontPage-adopt-button full-button"
@@ -15,8 +18,14 @@
       <img class="frontPage-about-dogs" src="./../assets/dogs-three.png">
       <div class="frontPage-about-text">
         <h3>O naszym schronisku</h3>
-        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse vitae tincidunt velit. Praesent accumsan dolor sit amet justo pulvinar, id pharetra tellus rhoncus. Mauris malesuada dui vitae leo vulputate vestibulum. Suspendisse in dignissim ex. Duis cursus est nec odio dictum, nec cursus mi rutrum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer bibendum ultricies risus, at facilisis nulla vestibulum et. Praesent quis orci sed tortor aliquam maximus eu sit amet metus. Duis congue eleifend maximus. Phasellus et sagittis ex. Aliquam eu est quis ligula vulputate pretium. In placerat nisi sem, in pellentesque enim molestie eu.</p>
+        <p>
+          Schronisko jest całkowicie finansowane przez katowicki Urząd Miasta, a administratorem jest firma CIVITAS, która wykonuje zlecenie w ramach przetargu.
+          Pierwsi mieszkańcy znaleźli tu schronienie pod koniec lat 80-tych, kiedy schronisko zostało oddane do użytku.
+          Wiele zmieniło się od tamtej chwili. Przybyło zwierząt, zmienili się opiekunowie...
+          Dziś w schronisku dach nad głową ma około 150 psów i 70 kotów.
+          Nieustannie staramy się polepszać ich byt.
+          Koty rezydują w kociarni z dostępem do wybiegu. Szczeniaki mają namiastkę domu w szczeniarni, a dorosłe psy przebywają w dwóch pawilonach z dostępem do wybiegów.
+        </p>
       </div>
     </section>
 
@@ -134,7 +143,10 @@ p,
 }
 .frontPage-help-icon {
   padding: 2rem;
+  width: 8rem;
+  height: 8rem;
 }
+
 .frontPage-pets {
   background: $SecondBackground;
 }
