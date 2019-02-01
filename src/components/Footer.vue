@@ -4,12 +4,14 @@
 
     <div class="footer-common-padding footer-email footer-icontext-container">
       <fa-icon size="lg" class="footer-icon" icon="envelope"></fa-icon>
-      <a href="mailto:schronisko.katowice@gmail.com?subject=Drogie schronisko">email@shelter.com</a>
+      <a
+        href="mailto:schronisko.katowice@gmail.com?subject=Drogie schronisko"
+      >schronisko.katowice@gmail.com</a>
     </div>
 
     <div class="footer-common-padding footer-number footer-icontext-container">
       <fa-icon size="lg" class="footer-icon" icon="phone"></fa-icon>
-      <a href="tel:032-256-34-15">032-256-34-15</a>
+      <a href="tel:032-256-34-15">032 256 34 15</a>
     </div>
 
     <div class="footer-common-padding footer-number-cellphone footer-icontext-container">
