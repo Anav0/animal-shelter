@@ -1,5 +1,5 @@
 <template>
-  <div class="contactPage-container">
+  <article class="page">
     <h3>Dane kontaktowe</h3>
     <section>
       <h4>Numery telefonów</h4>
@@ -12,18 +12,18 @@
         href="mailto:schronisko.katowice@gmail.com?subject=Drogie schronisko"
       >schronisko.katowice@gmail.com</a>
     </section>
-    <section class="contactPage-openhours">
+    <div class="contactPage-openhours">
       <h4 class="contactPage-openhours-header">Godziny otwarcia</h4>
       <b class="contactPage-openhours-mon-frd">poniedziałek-piątek:</b>
       <span class="contactPage-openhours-mon-frd-hours">od 7:00 do 17:00</span>
       <b class="contactPage-openhours-sunday">sobota:</b>
       <span class="contactPage-openhours-sunday-hours">od 7:00 do 14:00</span>
-    </section>
+    </div>
     <section class="contactPage-openhours">
       <!--TODO: wstawić tutaj mapkę-->
       <h4 class="contactPage-openhours-header">Gdzie jesteśmy</h4>
     </section>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -32,17 +32,6 @@ export default {};
 
 <style scoped lang="scss">
 @import "./../scss/base.scss";
-
-.contactPage-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: $BaseSectionPadding;
-  background: $MainBackground;
-}
 
 .contactPage-openhours {
   display: grid;
@@ -68,19 +57,6 @@ export default {};
 .contactPage-openhours-sunday-hours {
   grid-column: 2;
   grid-row: 3;
-}
-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 1rem 0;
-}
-h4,
-h3 {
-  color: $SecondColor;
 }
 a {
   color: $AccentColor;
