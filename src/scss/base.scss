@@ -125,23 +125,31 @@ h6 {
   color: white;
   border: none;
 }
-ul .colored-list {
+.colored-list {
   list-style-type: none;
 }
 .colored-list li::before {
   content: "\2022";
   color: $AccentColor;
-
   font-weight: bold;
   display: inline-block;
   width: 1em;
 }
-
 .nested-list li {
   margin-left: 1rem;
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: $BaseSectionPadding;
+  background: $MainBackground;
+  color: $SecondColor;
+
   section {
     display: flex;
     flex-direction: column;
@@ -154,6 +162,9 @@ ul .colored-list {
   ul {
     list-style-type: desc;
     list-style-position: inside;
+  }
+  .colored-list {
+    list-style-type: none;
   }
   li {
     padding: 0.25rem;

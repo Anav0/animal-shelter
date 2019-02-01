@@ -13,7 +13,8 @@
       <div class="navbar-end">
         <router-link class="navbar-item" to="/" exact>O schronisku</router-link>
         <router-link class="navbar-item" to="/pets">Nasze zwierzaki</router-link>
-        <router-link class="navbar-item" to="/adoption">adopcja</router-link>
+        <router-link class="navbar-item" to="/adoption">Adopcja</router-link>
+        <router-link class="navbar-item" to="/hotel">Hotel</router-link>
         <router-link class="navbar-item" to="/help">Pomoc</router-link>
         <router-link class="navbar-item" to="/contact">Kontakt</router-link>
       </div>

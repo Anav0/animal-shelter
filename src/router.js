@@ -4,6 +4,7 @@ import FrontPage from "./pages/FrontPage.vue";
 import PetsPage from "./pages/PetsPage.vue";
 import ContactPage from "./pages/ContactPage.vue";
 import AdoptionPage from "./pages/AdoptionPage.vue";
+import HotelPage from "./pages/HotelPage.vue";
 Vue.use(Router);
 
 const help = { template: "<p>Help page</p>" };
@@ -36,6 +37,11 @@ export default new Router({
       path: "/adoption",
       name: "AdoptionPage",
       component: AdoptionPage
+    },
+    {
+      path: "/hotel",
+      name: "HotelPage",
+      component: HotelPage
     }
   ]
 });

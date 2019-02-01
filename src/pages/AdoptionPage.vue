@@ -1,8 +1,8 @@
-<template>
-  <div class="adoptionPage-container page">
-    <h4>Adopcja</h4>
+<template >
+  <article class="page">
+    <h3>Adopcja</h3>
     <section>
-      <h5>Przed decyzją o adopcji</h5>
+      <h4>Przed decyzją o adopcji</h4>
       <p>
         Żadna najcenniejsza rzecz ani przedmiot nie wzbogaca naszego życia tak jak obecność zwierzaka.
         Jest lekarstwem na nasze smutki i samotność, obdarza nas przyjaźnią bezinteresowną, czystą i wielką.
@@ -21,7 +21,6 @@
       </ul>
       <p>Jeżeli na te wszystkie pytania odpowiedziałeś twierdząco to serdecznie zapraszamy cię do schroniska. Psy i koty czekają na ciebie. Będzie wspaniale jeżeli ich nowym domem będzie twój dom.</p>
     </section>
-
     <section>
       <h5>Warunki adopcji</h5>
       <ul>
@@ -51,7 +50,7 @@
       </ul>
     </section>
     <section>
-      <h5>Obowiązki właściciela</h5>
+      <h4>Obowiązki właściciela</h4>
       <ul>
         <li>Nie wypuszczamy swojego zwierzaka z domu bez opieki - jest to karane mandatem w wysokości 200 zł.</li>
         <li>Opłacamy podatek od posiadania psa.</li>
@@ -62,7 +61,7 @@
         <li>Nie pozwalamy naszemu zwierzakowi mieć potomstwa (jeśli nie chcemy go wychowywać) podajemy tabletki antykoncepcyjne lub poddajemy zabiegowi sterylizacji.</li>
       </ul>
     </section>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -71,16 +70,4 @@ export default {};
 
 <style scoped lang="scss">
 @import "./../scss/base.scss";
-
-.adoptionPage-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: $BaseSectionPadding;
-  background: $MainBackground;
-  color: $SecondColor;
-}
 </style>
