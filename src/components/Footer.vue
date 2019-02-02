@@ -48,7 +48,7 @@ export default {
   grid-gap: 0.5rem 4rem;
   margin: 5vh;
 
-  justify-items: start;
+  justify-items: flex-start;
   align-items: center;
   justify-content: center;
 }
@@ -107,7 +107,7 @@ export default {
 .footer-icontext-container {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 span {
   grid-row: 5/6;
