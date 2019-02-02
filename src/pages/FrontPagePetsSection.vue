@@ -71,6 +71,8 @@ export default {
   justify-content: center;
   align-items: center;
   align-content: center;
+  width: 100%;
+  height: 100%;
 }
 .petsSection-header {
   align-self: center;
@@ -87,5 +89,11 @@ export default {
 }
 button {
   margin: 2rem;
+}
+
+@media (max-width: $tablet) {
+  .petsSection-dog {
+    margin: 2rem 0;
+  }
 }
 </style>

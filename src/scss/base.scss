@@ -18,6 +18,10 @@ $navbar-item-active-color: $AccentColor;
 $navbar-item-hover-color: $AccentColor;
 $navbar-item-hover-background-color: transparent;
 $navbar-breakpoint: $tablet;
+
+$navbar-dropdown-arrow: $AccentColor;
+$navbar-dropdown-item-hover-color: $AccentColor;
+$navbar-dropdown-item-active-color: $AccentColor;
 @import "~bulma/bulma";
 
 * {

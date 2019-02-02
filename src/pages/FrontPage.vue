@@ -90,7 +90,10 @@ export default {
 
 <style scoped lang="scss">
 @import "./../scss/base.scss";
-
+.frontPage-container {
+  width: 100%;
+  height: 100%;
+}
 section {
   color: $SecondColor;
   padding: $BaseSectionPadding;
@@ -121,7 +124,7 @@ p,
   justify-content: left;
   align-self: center;
 }
-//TODO: change picture becouse is not centered right
+//TODO: change picture becouse it is not centered
 .frontPage-about-dogs {
   align-self: center;
   justify-content: center;
