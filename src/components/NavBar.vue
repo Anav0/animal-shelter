@@ -42,6 +42,7 @@ export default {};
 .navbar-menu {
   box-shadow: none;
   text-align: center;
+  align-items: center;
 }
 .navbar-brand img {
   width: 125px;
