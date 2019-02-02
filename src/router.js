@@ -5,9 +5,8 @@ import PetsPage from "./pages/PetsPage.vue";
 import ContactPage from "./pages/ContactPage.vue";
 import AdoptionPage from "./pages/AdoptionPage.vue";
 import HotelPage from "./pages/HotelPage.vue";
+import HelpPage from "./pages/HelpPage.vue";
 Vue.use(Router);
-
-const help = { template: "<p>Help page</p>" };
 
 export default new Router({
   mode: "history",
@@ -26,7 +25,7 @@ export default new Router({
     {
       path: "/help",
       name: "HelpPage",
-      component: help
+      component: HelpPage
     },
     {
       path: "/contact",
