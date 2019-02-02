@@ -22,6 +22,10 @@
     <section class="contactPage-openhours">
       <!--TODO: wstawić tutaj mapkę-->
       <h4 class="contactPage-openhours-header">Gdzie jesteśmy</h4>
+      <a
+        target="_blank"
+        href="https://www.google.com/maps/place/Milowicka+1B,+40-001+Katowice/data=!4m2!3m1!1s0x4716d024d9bfef3d:0xc5d1381f723a7b96?ved=2ahUKEwj44aTRvp3gAhXr-yoKHWuVAMwQ8gEwAHoECAAQAQ"
+      >Zobacz na mapie</a>
     </section>
   </article>
 </template>

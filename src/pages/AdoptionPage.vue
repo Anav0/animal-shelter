@@ -10,7 +10,7 @@
       </p>
     </section>
     <section>
-      <h5>Zanim zdecydujesz się przyjąć do swego domu zwierzę odpowiedz sobie na te pytania:</h5>
+      <h4>Zanim zdecydujesz się przyjąć do swego domu zwierzę odpowiedz sobie na te pytania:</h4>
       <ul>
         <li>Czy masz odpowiednie warunki?</li>
         <li>Czy masz dość czasu?</li>
@@ -22,7 +22,7 @@
       <p>Jeżeli na te wszystkie pytania odpowiedziałeś twierdząco to serdecznie zapraszamy cię do schroniska. Psy i koty czekają na ciebie. Będzie wspaniale jeżeli ich nowym domem będzie twój dom.</p>
     </section>
     <section>
-      <h5>Warunki adopcji</h5>
+      <h4>Warunki adopcji</h4>
       <ul>
         <li>Zwierzę może adoptować osoba pełnoletnia</li>
         <li>Adoptujący musi być przygotowany na zabranie zwierzęcia ze schroniska (musi mieć obrożę, smycz, kaganiec lub transporterek dla kota).</li>
