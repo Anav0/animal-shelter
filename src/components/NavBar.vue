@@ -47,6 +47,7 @@ export default {};
 .navbar-brand img {
   width: 125px;
   height: auto;
+  object-fit: scale-down;
 }
 
 @media (max-width: $tablet) {

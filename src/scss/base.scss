@@ -6,9 +6,10 @@
 $primary: $AccentColor;
 $text: $Color;
 $text-light: $SecondColor;
-$family-sans-serif: "Poppins", sans-serif;
+$family-sans-serif: $default-font;
 $border: $AccentColor;
 $border-hover: darken($AccentColor, 25%);
+
 $tablet: 801px;
 
 //NAVBAR
@@ -22,6 +23,13 @@ $navbar-breakpoint: $tablet;
 $navbar-dropdown-arrow: $AccentColor;
 $navbar-dropdown-item-hover-color: $AccentColor;
 $navbar-dropdown-item-active-color: $AccentColor;
+// $size-1: 3rem;
+// $size-2: 2.5rem;
+// $size-3: 2rem;
+// $size-4: 1.5rem;
+// $size-5: 1.25rem;
+// $size-6: 1rem;
+// $size-7: 0.75rem;
 @import "~bulma/bulma";
 
 * {

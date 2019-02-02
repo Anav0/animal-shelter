@@ -22,7 +22,10 @@
     <h4 class="footer-header2 footer-common-padding">Czekamy na twoją wizytę</h4>
     <div class="footer-address footer-common-padding footer-icontext-container">
       <fa-icon size="lg" class="footer-icon" icon="map-marker-alt"></fa-icon>
-      <address>40-313 Katowice ul. Milowicka 1B</address>
+      <a
+        target="_blank"
+        href="https://www.google.com/maps/place/Milowicka+1B,+40-001+Katowice/data=!4m2!3m1!1s0x4716d024d9bfef3d:0xc5d1381f723a7b96?ved=2ahUKEwj44aTRvp3gAhXr-yoKHWuVAMwQ8gEwAHoECAAQAQ"
+      >40-313 Katowice ul. Milowicka 1B</a>
     </div>
 
     <span>Wykonał Igor Motyka</span>
