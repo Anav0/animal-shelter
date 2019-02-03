@@ -97,7 +97,6 @@ export default {
   height: 100%;
 }
 section {
-  color: $SecondColor;
   padding: $BaseSectionPadding;
   margin: 0;
   max-width: 100%;
@@ -117,7 +116,11 @@ p,
 
 .frontPage-about {
   background: $MainBackground;
-  max-height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .frontPage-about-text {
   display: flex;
@@ -128,8 +131,6 @@ p,
 }
 //TODO: change picture becouse it is not centered
 .frontPage-about-dogs {
-  align-self: center;
-  justify-content: center;
 }
 .frontPage-help {
   background: $MainBackground;
@@ -159,35 +160,6 @@ p,
   section {
     margin: 0;
     padding: 0.5rem;
-  }
-  .frontPage-about {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-  }
-  .frontPage-about-text {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .frontPage-about-dogs {
-    grid-column: 1;
-    grid-row: 1;
-  }
-}
-@media (min-width: $desktop) {
-  .frontPage-about {
-    display: grid;
-    grid-template-columns: 60% auto;
-    grid-template-rows: auto;
-  }
-
-  .frontPage-about-text {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .frontPage-about-dogs {
-    grid-column: 1;
-    grid-row: 1;
   }
 }
 </style>

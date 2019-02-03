@@ -6,22 +6,20 @@
     <h5 class="petCard-name">{{this.pet.name}}</h5>
     <button @click="showDetails" class="petCard-button main-button">Więcej</button>
 
-    <div class="modal" :class="{'is-active':showModal}">
-      <div class="modal-background"></div>
-      <div clas="modal-content" class="animated slideInDown">
-        <pet-details @click="showDetails" :pet="pet"></pet-details>
-      </div>
-      <button @click="showDetails" class="modal-close is-large round-button" aria-label="Close"></button>
-    </div>
+    <Modal @close="showDetails" v-if="showModal">
+      <pet-details @click="showDetails" :pet="pet"></pet-details>
+    </Modal>
   </div>
 </template>
 
 <script>
 import PetDetails from "./../components/PetDetails";
+import Modal from "./../components/Modal";
 
 export default {
   components: {
-    PetDetails
+    PetDetails,
+    Modal
   },
   data() {
     return {

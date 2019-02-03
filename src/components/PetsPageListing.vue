@@ -110,15 +110,28 @@ export default {
 }
 .paginate-links {
   margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
 }
 
 .paginate-links li {
   @extend .round-button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0.5rem;
 }
-.paginate-links a {
+.paginate-links li a {
   color: $SecondColor;
 }
 .paginate-links li.active {
   @extend .pressed;
+
+  color: white;
 }
 </style>

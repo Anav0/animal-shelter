@@ -1,15 +1,11 @@
 <template>
-  <div id="app" class="app-container hero is-fullheight">
-    <div class="hero-head">
-      <NavBar/>
-    </div>
+  <div id="app" class="app-container">
+    <NavBar/>
     <!--Hero body-->
     <div class="hero-body">
       <router-view></router-view>
     </div>
-    <div class="hero-foot">
-      <Footer/>
-    </div>
+    <Footer/>
   </div>
 </template>
 
@@ -37,15 +33,7 @@ export default {
   padding: 0;
 }
 .hero-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-head {
-  margin: 0;
-  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>
