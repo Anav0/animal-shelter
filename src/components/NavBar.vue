@@ -29,7 +29,7 @@ export default {};
 
 a {
   color: $Color;
-  transition: all 0.2s;
+  transition: all $trans-duration;
 }
 
 a:hover {

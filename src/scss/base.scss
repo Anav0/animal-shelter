@@ -80,7 +80,7 @@ h6 {
   border: 1px solid $AccentColor;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all $trans-duration;
 }
 .main-button:hover {
   background-color: $AccentColor;
@@ -106,7 +106,7 @@ h6 {
   width: 2.5rem;
   height: 2.5rem;
   color: $Color;
-  transition: all 0.2s;
+  transition: all $trans-duration;
   font-size: 1em;
 }
 
