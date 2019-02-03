@@ -46,8 +46,8 @@ export default {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto auto;
   grid-gap: 0.5rem 4rem;
-  margin: 5vh;
-
+  padding: 5vh;
+  color: $Color;
   justify-items: flex-start;
   align-items: center;
   justify-content: center;

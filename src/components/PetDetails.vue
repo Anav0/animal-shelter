@@ -1,6 +1,6 @@
 <template>
   <div class="petDetails-container white-box">
-    <button @click="closeModal" class="round-button">X</button>
+    <button @click="close" class="round-button">X</button>
     <img :src="pet.image">
     <div class="petDetails-info-container">
       <div class="petDetails-info-name-gender">
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     closeModal() {
-      this.$emit("click");
+      this.$emit("close");
     }
   },
   computed: {
@@ -58,10 +58,8 @@ export default {
   position: relative;
 
   grid-template-columns: 40% 60%;
-  max-width: 90vh;
-  max-height: 90vh;
-  margin: 0;
-  padding: 0;
+  max-width: 85vh;
+  max-height: 85vh;
 }
 .petDetails-info-container {
   display: flex;
@@ -78,10 +76,11 @@ export default {
 .petDetails-gender-icon {
   margin: 0.5rem;
 }
+
 button {
   position: absolute;
-  top: -8%;
-  left: 100%;
+  top: -35px;
+  right: -35px;
 }
 
 img {
