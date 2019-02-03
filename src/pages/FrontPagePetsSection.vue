@@ -40,19 +40,18 @@ export default {
           isChiped: false,
           name: "Bucket",
           image:
-            "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
-          diseases: "Brak"
+            "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
         },
         {
           race: "nieznana",
-          desc: "Uwielbia siedzieć na kanapie i wygrzewać swoją pupcię",
+          desc: "Uwielbia siedzieć na kanapie i wygrzewać się",
           isMale: false,
           birth_date: "1/30/2019",
           isVaccinated: true,
           isDeWormed: true,
           isChiped: false,
           name: "Pupson",
-          diseases: "Brak",
+
           image:
             "https://images.unsplash.com/photo-1532753876631-2d5cf129df39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
         }
