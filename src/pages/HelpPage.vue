@@ -2,8 +2,11 @@
   <article class="page">
     <h3>Wolontariat</h3>
     <section>
-      <p>Wolontariat w Miejskim Schronisku dla Bezdomnych Zwierząt w Katowicach zaczął działać w październiku 2009 roku, dzięki staraniom Fundacji S.O.S. dla Zwierząt. Obecnie kontynuowany jest przez Fundację
-        <a href="http://www.przystanekschronisko.org/">Przystanek Schronisko</a>, która powstała by objąć opieką zwierzęta przebywające w schronisku w Katowicach.
+      <p>
+        Wolontariat w Miejskim Schronisku dla Bezdomnych Zwierząt w Katowicach zaczął działać w październiku 2009 roku, dzięki staraniom Fundacji S.O.S. dla Zwierząt. Obecnie kontynuowany jest przez Fundację
+        <a
+          href="http://www.przystanekschronisko.org/"
+        >Przystanek Schronisko</a>, która powstała by objąć opieką zwierzęta przebywające w schronisku w Katowicach.
       </p>
     </section>
     <section>

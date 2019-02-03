@@ -8,7 +8,7 @@
 
     <div class="modal" :class="{'is-active':showModal}">
       <div class="modal-background"></div>
-      <div clas="modal-content">
+      <div clas="modal-content" class="animated slideInDown">
         <pet-details @click="showDetails" :pet="pet"></pet-details>
       </div>
       <button @click="showDetails" class="modal-close is-large round-button" aria-label="Close"></button>
@@ -75,9 +75,6 @@ export default {
   grid-column: 1/2;
   align-self: center;
   margin: 2rem;
-}
-.box {
-  padding: 0;
 }
 
 @media (min-width: $tablet) {

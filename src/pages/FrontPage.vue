@@ -14,7 +14,7 @@
       >Adoptuj przyjaciela</router-link>
     </section>
     <!--About section-->
-    <section class="frontPage-about fullscreen">
+    <section class="frontPage-about fullscreen" data-aos="fade-up" data-aos-duration="1000">
       <img class="frontPage-about-dogs" src="./../assets/dogs-three.png">
       <div class="frontPage-about-text">
         <h3>O naszym schronisku</h3>
@@ -80,6 +80,8 @@
 <script>
 import IconAndText from "./../components/IconAndText";
 import FrontPagePetsSection from "./FrontPagePetsSection";
+import "aos/dist/aos.css";
+
 export default {
   components: {
     IconAndText,
