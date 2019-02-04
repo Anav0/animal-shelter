@@ -82,6 +82,8 @@ b {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
+
+  justify-content: flex-start;
 }
 .contactPage-openhours-header {
   grid-column: 1;

@@ -64,6 +64,7 @@ export default {};
 }
 a {
   color: $AccentColor;
+  transition: color $trans-duration;
 }
 a:hover {
   color: darken($AccentColor, 10%);

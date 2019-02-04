@@ -91,6 +91,8 @@ h6 {
   @extend .main-button;
   background-color: $AccentColor;
   border: none;
+
+  transition: opacity $trans-duration;
 }
 
 .full-button:hover {
@@ -106,8 +108,8 @@ h6 {
   width: 2.5rem;
   height: 2.5rem;
   color: $Color;
-  transition: all $trans-duration;
   font-size: 1em;
+  transition: all $trans-duration;
 }
 
 .round-button:hover {
