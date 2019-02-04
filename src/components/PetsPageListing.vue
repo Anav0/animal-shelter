@@ -15,9 +15,7 @@
 </template>
 
 <script>
-import axios from "axios";
 import * as endpoints from "./../endpoints.js";
-import * as unsplash from "./../unsplash.js";
 import PetCard from "./PetCard";
 
 export default {
@@ -43,11 +41,13 @@ export default {
   methods: {
     fetchDogs() {
       endpoints.fetchPets(10, "dog").then(data => {
+        console.log(data);
         this.pets = data;
       });
     },
     fetchCats() {
       endpoints.fetchPets(10, "cat").then(data => {
+        console.log(data);
         this.pets = data;
       });
     }

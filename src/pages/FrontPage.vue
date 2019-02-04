@@ -89,7 +89,6 @@
 import IconAndText from "./../components/IconAndText";
 import "aos/dist/aos.css";
 import PetCard from "./../components/PetCard";
-import axios from "axios";
 import * as endpoints from "./../endpoints.js";
 
 export default {
