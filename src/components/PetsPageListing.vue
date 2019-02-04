@@ -16,7 +16,7 @@
 
 <script>
 import axios from "axios";
-import endpoints from "./../endpoints.js";
+import * as endpoints from "./../endpoints.js";
 import * as unsplash from "./../unsplash.js";
 import PetCard from "./PetCard";
 
@@ -42,47 +42,14 @@ export default {
   },
   methods: {
     fetchDogs() {
-      axios
-        .get(endpoints.pets)
-        .then(response => {
-          this.pets = response.data;
-
-          unsplash.getImages("dog", 30).then(data => {
-            var i = 0;
-            this.pets.map(pet => {
-              if (i > data.results.length - 1) i = 0;
-
-              pet.image = data.results[i].urls.small;
-
-              i++;
-            });
-          });
-        })
-        .catch(e => {
-          // eslint-disable-next-line
-          console.error(e);
-        });
+      endpoints.fetchPets(10, "dog").then(data => {
+        this.pets = data;
+      });
     },
     fetchCats() {
-      axios
-        .get(endpoints.pets)
-        .then(response => {
-          this.pets = response.data;
-
-          unsplash.getImages("cat", 30).then(data => {
-            var i = 0;
-            this.pets.map(pet => {
-              if (i > data.results.length - 1) i = 0;
-              pet.image = data.results[i].urls.small;
-
-              i++;
-            });
-          });
-        })
-        .catch(e => {
-          // eslint-disable-next-line
-          console.error(e);
-        });
+      endpoints.fetchPets(10, "cat").then(data => {
+        this.pets = data;
+      });
     }
   }
 };

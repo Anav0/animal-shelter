@@ -1,7 +1,7 @@
 <template>
   <div class="petCard-container white-box">
     <div class="petCard-image">
-      <img :src="pet.image">
+      <img :src="pet.image_small">
     </div>
     <h5 class="petCard-name">{{this.pet.name}}</h5>
     <button @click="showDetails" class="petCard-button main-button">Więcej</button>
@@ -49,7 +49,6 @@ export default {
   height: 450px;
   width: 300px;
   color: $SecondColor;
-  overflow: hidden;
 }
 
 .petCard-image {
