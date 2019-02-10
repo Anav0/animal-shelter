@@ -6,6 +6,7 @@ import ContactPage from "./pages/ContactPage.vue";
 import AdoptionPage from "./pages/AdoptionPage.vue";
 import HotelPage from "./pages/HotelPage.vue";
 import HelpPage from "./pages/HelpPage.vue";
+import LoginPage from "./pages/LoginPage.vue";
 import PetsPageListing from "./components/PetsPageListing.vue";
 Vue.use(Router);
 
@@ -58,6 +59,11 @@ export default new Router({
       path: "/hotel",
       name: "HotelPage",
       component: HotelPage
+    },
+    {
+      path: "/login",
+      name: "LoginPage",
+      component: LoginPage
     }
   ]
 });

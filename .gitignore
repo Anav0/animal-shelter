@@ -21,3 +21,4 @@ yarn-error.log*
 *.sw*
 src/endpoints.js
 unsplash.js
+isAuth.js
