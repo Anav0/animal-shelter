@@ -1,5 +1,11 @@
 <template>
   <div class="petsPageListing-container">
+    <SelfBuildingSquareSpinner
+      v-show="isLoading"
+      :animation-duration="4000"
+      :size="80"
+      :color="'#f1cdb3'"
+    />
     <paginate name="pets" :list="pets" :per="8">
       <div class="petsPageListing-list">
         <PetCard
@@ -17,10 +23,12 @@
 <script>
 import * as endpoints from "./../api.js";
 import PetCard from "./PetCard";
+import { SelfBuildingSquareSpinner } from "epic-spinners";
 
 export default {
   components: {
-    PetCard
+    PetCard,
+    SelfBuildingSquareSpinner
   },
   mounted() {
     if (this.display == "cats") this.fetchCats();
@@ -29,7 +37,8 @@ export default {
   data() {
     return {
       pets: [],
-      paginate: ["pets"]
+      paginate: ["pets"],
+      isLoading: true
     };
   },
   props: {
@@ -42,11 +51,13 @@ export default {
     fetchDogs() {
       endpoints.getPets(10, "dog").then(data => {
         this.pets = data;
+        this.isLoading = false;
       });
     },
     fetchCats() {
       endpoints.getPets(10, "cat").then(data => {
         this.pets = data;
+        this.isLoading = false;
       });
     }
   }
