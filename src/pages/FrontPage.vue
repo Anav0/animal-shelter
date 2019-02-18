@@ -89,7 +89,7 @@
 import IconAndText from "./../components/IconAndText";
 import "aos/dist/aos.css";
 import PetCard from "./../components/PetCard";
-import * as endpoints from "./../endpoints.js";
+import * as endpoints from "./../api.js";
 
 export default {
   data() {
@@ -98,7 +98,7 @@ export default {
     };
   },
   mounted() {
-    endpoints.fetchPets(3).then(response => {
+    endpoints.getPets(3, "dog").then(response => {
       this.pets = response;
     });
   },

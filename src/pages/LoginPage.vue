@@ -42,16 +42,19 @@
 </template>
 
 <script>
-import axios from "axios";
-import isAuth from "./../../isAuth.js";
+import { isAuth, call } from "./../api.js";
 import { HollowDotsSpinner } from "epic-spinners";
 export default {
   mounted() {
-    isAuth().then(isAuthenticated => {
-      if (isAuthenticated) {
-        //TODO: Skip login page
-      }
-    });
+    isAuth()
+      .then(isAuthenticated => {
+        if (isAuthenticated) {
+          //TODO: Skip login page
+        }
+      })
+      .catch(e => {
+        this.errors.push(e.message);
+      });
   },
 
   components: {
@@ -85,30 +88,26 @@ export default {
       e.preventDefault();
     },
     sendLoginRequest() {
-      var body = {
-        username: this.username,
-        password: this.password
+      const config = {
+        method: "post",
+        url: "login",
+        withCredentials: true,
+        data: {
+          username: this.username,
+          password: this.password
+        }
       };
+      call(config).then(response => {
+        console.log(response);
 
-      axios
-        .post("http://localhost:5000/login", body, {
-          withCredentials: true
-        })
-        .then(response => {
-          console.log(response);
-
-          if (response.data.successful) {
-            const user = response.data.response;
-            console.log(user);
-          } else {
-            this.errors.push(response.data.errorMessage);
-          }
-          this.isLoading = false;
-        })
-        .catch(e => {
-          this.errors.push(e.message);
-          this.isLoading = false;
-        });
+        if (response.data.successful) {
+          const user = response.data.response;
+          console.log(user);
+        } else {
+          this.errors.push(response.data.errorMessage);
+        }
+        this.isLoading = false;
+      });
     }
   }
 };
