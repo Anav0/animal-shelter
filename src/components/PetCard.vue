@@ -29,7 +29,16 @@ export default {
   props: {
     pet: {
       type: Object,
-      required: true
+      default: {
+        name: "Unknown",
+        isMale: true,
+        race: "Unknown",
+        birth_date: Date.now,
+        isVaccinated: true,
+        isDeWormed: true,
+        isChiped: false,
+        desc: "Unknown"
+      }
     }
   },
   methods: {
