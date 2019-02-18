@@ -41,13 +41,11 @@ export default {
   methods: {
     fetchDogs() {
       endpoints.getPets(10, "dog").then(data => {
-        console.log(data);
         this.pets = data;
       });
     },
     fetchCats() {
       endpoints.getPets(10, "cat").then(data => {
-        console.log(data);
         this.pets = data;
       });
     }

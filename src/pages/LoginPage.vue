@@ -98,11 +98,9 @@ export default {
         }
       };
       call(config).then(response => {
-        console.log(response);
-
         if (response.data.successful) {
           const user = response.data.response;
-          console.log(user);
+          //TODO: add user to some sort of storage... maybe vuex
         } else {
           this.errors.push(response.data.errorMessage);
         }

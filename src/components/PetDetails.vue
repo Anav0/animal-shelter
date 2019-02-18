@@ -1,13 +1,14 @@
 <template>
   <div class="petDetails-container white-box">
     <button @click="close" class="round-button">X</button>
-    <picture>
+    <picture v-if="pet.image_small">
       <source :srcset="pet.image_small" media="(max-width: 768px)">
       <source :srcset="pet.image_regular" media="(min-width: 769px)">
       <source :srcset="pet.image_small" media="(min-width: 1024px)">
       <source :srcset="pet.image_small">
       <img>
     </picture>
+    <img v-else src="./../../public/pet_image.svg">
     <div class="petDetails-info-container">
       <div class="petDetails-info-name-gender">
         <h3>{{this.pet.name}}</h3>

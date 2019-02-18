@@ -20,7 +20,7 @@
       <span class="contactPage-openhours-sunday-hours">od 7:00 do 14:00</span>
     </div>
     <section class="contactPage-openhours">
-      <!--TODO: wstawić tutaj mapkę-->
+      <!--TODO: insert map here-->
       <h4 class="contactPage-openhours-header">Gdzie jesteśmy</h4>
       <a
         target="_blank"
