@@ -5,6 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import VuePaginate from "vue-paginate";
 import AOS from "aos";
 import "aos/dist/aos.css";
+require("dotenv").load();
 import {
   faEnvelope,
   faPhone,
@@ -34,7 +35,6 @@ library.add(
   faVenus
 );
 Vue.component("fa-icon", FontAwesomeIcon);
-
 new Vue({
   router,
   created() {

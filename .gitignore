@@ -3,6 +3,7 @@ node_modules
 /dist
 
 # local env files
+.env
 .env.local
 .env.*.local
 
@@ -20,6 +21,3 @@ yarn-error.log*
 *.sln
 *.sw*
 
-# api files containing api keys
-src/unsplash.js
-src/mockaroo.js
