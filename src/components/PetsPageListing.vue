@@ -1,5 +1,11 @@
 <template>
   <div class="petsPageListing-container">
+    <SelfBuildingSquareSpinner
+      v-show="isLoading"
+      :animation-duration="4000"
+      :size="80"
+      :color="'#f1cdb3'"
+    />
     <paginate name="pets" :list="pets" :per="8">
       <div class="petsPageListing-list">
         <PetCard
@@ -15,14 +21,14 @@
 </template>
 
 <script>
-import axios from "axios";
-import endpoints from "./../endpoints.js";
-import * as unsplash from "./../unsplash.js";
+import * as endpoints from "./../api.js";
 import PetCard from "./PetCard";
+import { SelfBuildingSquareSpinner } from "epic-spinners";
 
 export default {
   components: {
-    PetCard
+    PetCard,
+    SelfBuildingSquareSpinner
   },
   mounted() {
     if (this.display == "cats") this.fetchCats();
@@ -31,7 +37,8 @@ export default {
   data() {
     return {
       pets: [],
-      paginate: ["pets"]
+      paginate: ["pets"],
+      isLoading: true
     };
   },
   props: {
@@ -42,47 +49,16 @@ export default {
   },
   methods: {
     fetchDogs() {
-      axios
-        .get(endpoints.pets)
-        .then(response => {
-          this.pets = response.data;
-
-          unsplash.getImages("dog", 30).then(data => {
-            var i = 0;
-            this.pets.map(pet => {
-              if (i > data.results.length - 1) i = 0;
-
-              pet.image = data.results[i].urls.small;
-
-              i++;
-            });
-          });
-        })
-        .catch(e => {
-          // eslint-disable-next-line
-          console.error(e);
-        });
+      endpoints.getPets(10, "dog").then(data => {
+        this.pets = data;
+        this.isLoading = false;
+      });
     },
     fetchCats() {
-      axios
-        .get(endpoints.pets)
-        .then(response => {
-          this.pets = response.data;
-
-          unsplash.getImages("cat", 30).then(data => {
-            var i = 0;
-            this.pets.map(pet => {
-              if (i > data.results.length - 1) i = 0;
-              pet.image = data.results[i].urls.small;
-
-              i++;
-            });
-          });
-        })
-        .catch(e => {
-          // eslint-disable-next-line
-          console.error(e);
-        });
+      endpoints.getPets(10, "cat").then(data => {
+        this.pets = data;
+        this.isLoading = false;
+      });
     }
   }
 };

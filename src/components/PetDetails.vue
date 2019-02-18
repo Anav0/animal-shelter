@@ -1,7 +1,14 @@
 <template>
   <div class="petDetails-container white-box">
     <button @click="close" class="round-button">X</button>
-    <img :src="pet.image">
+    <picture v-if="pet.image_small">
+      <source :srcset="pet.image_small" media="(max-width: 768px)">
+      <source :srcset="pet.image_regular" media="(min-width: 769px)">
+      <source :srcset="pet.image_small" media="(min-width: 1024px)">
+      <source :srcset="pet.image_small">
+      <img>
+    </picture>
+    <img v-else src="./../../public/pet_image.svg">
     <div class="petDetails-info-container">
       <div class="petDetails-info-name-gender">
         <h3>{{this.pet.name}}</h3>
@@ -30,7 +37,7 @@ export default {
     }
   },
   methods: {
-    closeModal() {
+    close() {
       this.$emit("close");
     }
   },
@@ -58,8 +65,10 @@ export default {
   position: relative;
 
   grid-template-columns: 40% 60%;
-  max-width: 85vh;
-  max-height: 85vh;
+  max-width: 800px;
+  max-height: 80vh;
+
+  margin: 2rem;
 }
 .petDetails-info-container {
   display: flex;
@@ -113,20 +122,21 @@ p {
 @media (max-width: $tablet) {
   .petDetails-container {
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-
-    max-width: 100vh;
+    grid-template-rows: 20rem auto;
+    overflow: auto;
+    max-width: 95vw;
     max-height: 80vh;
     margin: 1rem;
   }
-  .petDetails-info-container {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
   img {
-    grid-row: 1/2;
-    grid-column: 1/2;
+    grid-row: 1;
+    grid-column: 1;
   }
+  .petDetails-info-container {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
   button {
     display: none;
   }

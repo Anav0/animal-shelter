@@ -1,7 +1,7 @@
 <template>
   <div class="petCard-container white-box">
     <div class="petCard-image">
-      <img :src="pet.image">
+      <img :src="image">
     </div>
     <h5 class="petCard-name">{{this.pet.name}}</h5>
     <button @click="showDetails" class="petCard-button main-button">Więcej</button>
@@ -29,12 +29,27 @@ export default {
   props: {
     pet: {
       type: Object,
-      required: true
+      default: {
+        name: "Unknown",
+        isMale: true,
+        race: "Unknown",
+        birth_date: Date.now,
+        isVaccinated: true,
+        isDeWormed: true,
+        isChiped: false,
+        desc: "Unknown"
+      }
     }
   },
   methods: {
     showDetails() {
       return (this.showModal = !this.showModal);
+    }
+  },
+  computed: {
+    image() {
+      if (!this.pet.image_small) return require("./../../public/pet_image.svg");
+      else return this.pet.image_small;
     }
   }
 };
@@ -49,10 +64,12 @@ export default {
   height: 450px;
   width: 300px;
   color: $SecondColor;
-  overflow: hidden;
 }
 
 .petCard-image {
+  display: flex;
+  flex-direction: column;
+
   grid-row: 1/2;
   grid-column: 1/2;
 }

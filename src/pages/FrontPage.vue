@@ -13,6 +13,7 @@
         to="/pets"
       >Adoptuj przyjaciela</router-link>
     </section>
+
     <!--About section-->
     <section class="frontPage-about fullscreen" data-aos="fade-up" data-aos-duration="1000">
       <img class="frontPage-about-dogs" src="./../assets/dogs-three.png">
@@ -29,8 +30,15 @@
       </div>
     </section>
 
+    <!--Example dogs-->
     <section class="frontPage-pets">
-      <FrontPagePetsSection></FrontPagePetsSection>
+      <div class="petsSection-container">
+        <h3 class="petsSection-header">Niektórzy z naszych przyjaciół poszukujących domu</h3>
+        <div class="petsSection-example-dogs">
+          <PetCard class="petsSection-dog" v-for="(pet, i) in pets" :pet="pet" :key="i"></PetCard>
+        </div>
+        <router-link tag="button" to="/pets" class="full-button">Poznaj resztę</router-link>
+      </div>
     </section>
 
     <!--How can you help-->
@@ -79,13 +87,24 @@
 
 <script>
 import IconAndText from "./../components/IconAndText";
-import FrontPagePetsSection from "./FrontPagePetsSection";
 import "aos/dist/aos.css";
+import PetCard from "./../components/PetCard";
+import * as endpoints from "./../api.js";
 
 export default {
+  data() {
+    return {
+      pets: []
+    };
+  },
+  mounted() {
+    endpoints.getPets(3, "dog").then(response => {
+      this.pets = response;
+    });
+  },
   components: {
     IconAndText,
-    FrontPagePetsSection
+    PetCard
   }
 };
 </script>
@@ -161,5 +180,35 @@ p,
     margin: 0;
     padding: 0.5rem;
   }
+
+  .petsSection-dog {
+    margin: 2rem 0;
+  }
+}
+
+.petsSection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+}
+.petsSection-header {
+  align-self: center;
+  text-align: center;
+}
+.petsSection-example-dogs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.petsSection-dog {
+  margin: 2rem;
+}
+button {
+  margin: 2rem;
 }
 </style>

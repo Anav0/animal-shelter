@@ -19,5 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
-src/endpoints.js
-unsplash.js
+
+# api files containing api keys
+src/unsplash.js
+src/mockaroo.js
