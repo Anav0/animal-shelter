@@ -105,4 +105,11 @@ b {
   grid-column: 2;
   grid-row: 3;
 }
+a {
+  color: $AccentColor;
+  transform: opacity $trans-duration;
+}
+a:hover {
+  opacity: 0.5;
+}
 </style>

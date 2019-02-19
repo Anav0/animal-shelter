@@ -5,7 +5,6 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import VuePaginate from "vue-paginate";
 import AOS from "aos";
 import "aos/dist/aos.css";
-require("dotenv").load();
 import {
   faEnvelope,
   faPhone,
@@ -16,7 +15,8 @@ import {
   faSyringe,
   faHandsHelping,
   faMars,
-  faVenus
+  faVenus,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -32,8 +32,10 @@ library.add(
   faSyringe,
   faHandsHelping,
   faMars,
-  faVenus
+  faVenus,
+  faBars
 );
+
 Vue.component("fa-icon", FontAwesomeIcon);
 new Vue({
   router,
