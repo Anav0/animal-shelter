@@ -140,6 +140,8 @@ p,
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 .frontPage-about-text {
   display: flex;
@@ -147,9 +149,6 @@ p,
   align-items: flex-start;
   justify-content: left;
   align-self: center;
-}
-//TODO: change picture becouse it is not centered
-.frontPage-about-dogs {
 }
 .frontPage-help {
   background: $MainBackground;

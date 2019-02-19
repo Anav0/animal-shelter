@@ -122,9 +122,12 @@ span {
     flex-direction: column;
 
     & div,
-    h4,
-    span {
+    h4 {
       width: 100%;
+    }
+
+    span {
+      align-self: center;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
-  <div class="modal-backdrop" @click="close">
-    <div class="animated slideInDown">
+  <div class="modal-backdrop">
+    <div class="animated slideInDown" @click="close">
       <slot></slot>
     </div>
     <button @click="close" class="modal-close round-button">X</button>
