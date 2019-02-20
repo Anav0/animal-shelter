@@ -65,5 +65,14 @@ export default new Router({
       name: "LoginPage",
       component: LoginPage
     }
-  ]
+  ],
+  scrollBehavior(to) {
+    if (to.hash && window.innerWidth <= 760) {
+      return window.scrollTo({
+        top: document.querySelector(to.hash).offsetTop,
+        behavior: "smooth"
+      });
+    }
+    return window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 });

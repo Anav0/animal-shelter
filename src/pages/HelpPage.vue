@@ -1,15 +1,15 @@
 <template>
-  <article class="page">
+  <main id="page-anchor" class="page">
     <h3>Wolontariat</h3>
-    <section>
+    <article>
       <p>
         Wolontariat w Miejskim Schronisku dla Bezdomnych Zwierząt w Katowicach zaczął działać w październiku 2009 roku, dzięki staraniom Fundacji S.O.S. dla Zwierząt. Obecnie kontynuowany jest przez Fundację
         <a
           href="http://www.przystanekschronisko.org/"
         >Przystanek Schronisko</a>, która powstała by objąć opieką zwierzęta przebywające w schronisku w Katowicach.
       </p>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Kiedy wolontariusze przyjeżdżają do schroniska?</h4>
       <p>
         Wolontariusze spotykają się w schronisku 2 razy w tygodniu
@@ -21,12 +21,12 @@
         <b class="contactPage-openhours-sunday">soboty:</b>
         <span class="contactPage-openhours-sunday-hours">od 9:30 do 14:00</span>
       </div>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Kto może zostać wolontariuszem?</h4>
       <p>Wolontariuszem może zostać każda osoba mająca ukończone 18 lat.</p>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Jakie są obowiązki wolontariusza?</h4>
       <ul>
         <li>Socjalizacją zwierząt w schronisku</li>
@@ -36,8 +36,8 @@
         <li>Dokumentowaniem bieżących informacji o zwierzęciu (tworzenie i uaktualnianie jego opisu oraz robienie zdjęć)</li>
       </ul>
       <p>Dodatkowo wolontariusze uczestniczą w akcjach organizowanych przez Fundację oraz zobowiązani są brać udział w szkoleniach, które mają na celu edukację młodzieży w zakresie opieki nad zwierzętami. Niepełnoletni wolontariusze w czasie trwania zajęć ze zwierzętami mogą opuścić teren schroniska tylko i wyłącznie pod opieką pełnoletniego wolontariusza zgłaszając to uprzednio koordynatorowi.</p>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Jak wygląda praca wolontariusza poza schroniskiem?</h4>
       <p>Wolontariusze, którym czas nie pozwala na pracę ze zwierzętami na terenie schroniska, mogą:</p>
       <ul>
@@ -45,8 +45,8 @@
         <li>Pomagać w transporcie lub w jego znalezieniu,</li>
         <li>Uczestniczyć w akcjach adopcyjnych – kwestowaniu na rzecz zwierząt znajdujących się w schronisku.</li>
       </ul>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Jeśli chcesz zostać wolontariuszem</h4>
       <p>Osoby zainteresowane wolontariatem proszone są o kontakt z koordynatorem wolontariatu w godzinach od 18:00 do 19:30.</p>
       <!-- TODO: Create user cards for this two people -->
@@ -54,8 +54,8 @@
         <li>Psy – Anna Hyrnik, tel. 514 324 200.</li>
         <li>Koty – Iwona Cięciwa, tel. 889 771 107.</li>
       </ul>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Dokumenty do pobrania</h4>
       <a href="http://przystanekschronisko.org/i/dokumenty/Kwestionariusz.pdf">Kwestionariusz</a>
       <a
@@ -64,8 +64,8 @@
       <a
         href="http://przystanekschronisko.org/i/dokumenty/REGULAMIN%20WOLONTARIUSZA%20-%20popr.pdf"
       >Regulamin wolontariusza</a>
-    </section>
-  </article>
+    </article>
+  </main>
 </template>
 
 <script>
@@ -110,6 +110,6 @@ a {
   transform: opacity $trans-duration;
 }
 a:hover {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 </style>

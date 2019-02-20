@@ -1,5 +1,5 @@
 <template>
-  <div class="petsPageListing-container">
+  <section class="petsPageListing-container">
     <SelfBuildingSquareSpinner
       v-show="isLoading"
       :animation-duration="4000"
@@ -17,7 +17,7 @@
       </div>
     </paginate>
     <paginate-links for="pets"></paginate-links>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -31,8 +31,10 @@ export default {
     SelfBuildingSquareSpinner
   },
   mounted() {
-    if (this.display == "cats") this.fetchCats();
-    else if (this.display == "dogs") this.fetchDogs();
+    endpoints.getPets(10, this.display).then(data => {
+      this.pets = data;
+      this.isLoading = false;
+    });
   },
   data() {
     return {
@@ -45,20 +47,6 @@ export default {
     display: {
       type: String,
       required: true
-    }
-  },
-  methods: {
-    fetchDogs() {
-      endpoints.getPets(10, "dog").then(data => {
-        this.pets = data;
-        this.isLoading = false;
-      });
-    },
-    fetchCats() {
-      endpoints.getPets(10, "cat").then(data => {
-        this.pets = data;
-        this.isLoading = false;
-      });
     }
   }
 };
@@ -99,7 +87,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  justify-items: center;
   margin: 0.5rem;
 }
 .paginate-links li a {

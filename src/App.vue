@@ -2,9 +2,7 @@
   <div id="app" class="app-container">
     <NavBar/>
     <!--Hero body-->
-    <div class="hero-body">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
     <Footer/>
   </div>
 </template>
@@ -31,9 +29,5 @@ export default {
   background-position: 70% 0%;
   margin: 0;
   padding: 0;
-}
-.hero-body {
-  max-width: 100%;
-  max-height: 100%;
 }
 </style>

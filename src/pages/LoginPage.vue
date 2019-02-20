@@ -1,31 +1,34 @@
 <template>
-  <div class="loginPage-wrapper">
+  <main class="loginPage-wrapper">
     <div class="loginPage-container">
-      <div class="loginPage-left">
-        <img src="./../../public/logo.png">
+      <section class="loginPage-left">
+        <img alt="site logo" src="./../../public/logo.png">
         <!-- TODO: maybe i can display some sort of "funny fact of the day here..." -->
-      </div>
-      <div class="loginPage-right">
+      </section>
+      <section class="loginPage-right">
         <h4>Zaloguj się</h4>
-        <div class="loginPage-errors" v-if="errors.length > 0">
+        <section class="loginPage-errors" v-if="errors.length > 0">
           <h6>Błędy:</h6>
           <ul>
             <li v-for="(error, i) in errors" :key="i">{{error}}</li>
           </ul>
-        </div>
+        </section>
         <form @submit="validateForm" spellcheck="false">
-          <div class="loginPage-labelInput-container">
+          <section class="loginPage-labelInput-container">
             <label>Login</label>
             <input type="text" v-model="username" name="username" placeholder="Nazwa użytkownika">
-          </div>
-          <div class="loginPage-labelInput-container">
+          </section>
+
+          <section class="loginPage-labelInput-container">
             <label>Hasło</label>
             <input type="password" v-model="password" name="password" placeholder="Hasło">
-          </div>
-          <div class="loginPage-checkbox-container">
+          </section>
+
+          <section class="loginPage-checkbox-container">
             <label>Zapamiętaj mnie</label>
             <input type="checkbox" v-model="rememberMe" name="password" placeholder="Hasło">
-          </div>
+          </section>
+
           <input type="submit" class="main-button" value="Zaloguj" v-show="!isLoading">
         </form>
         <HollowDotsSpinner
@@ -35,10 +38,10 @@
           :dot-size="15"
           :dots-num="3"
           :color="'#f1cdb3'"
-        />
-      </div>
+        ></HollowDotsSpinner>
+      </section>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
