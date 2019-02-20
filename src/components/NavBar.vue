@@ -2,7 +2,7 @@
   <nav class="navbar-container">
     <div class="navbar-brand">
       <a href="/">
-        <img src="./../../public/logo.png">
+        <img src="./../../public/logo.png" alt="site logo">
       </a>
     </div>
 

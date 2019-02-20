@@ -2,7 +2,7 @@
   <main class="loginPage-wrapper">
     <div class="loginPage-container">
       <section class="loginPage-left">
-        <img src="./../../public/logo.png">
+        <img alt="site logo" src="./../../public/logo.png">
         <!-- TODO: maybe i can display some sort of "funny fact of the day here..." -->
       </section>
       <section class="loginPage-right">

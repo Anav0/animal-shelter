@@ -16,7 +16,7 @@
 
     <!--About section-->
     <section class="frontPage-about fullscreen" data-aos="fade-up" data-aos-duration="1000">
-      <img class="frontPage-about-dogs" src="./../assets/dogs-three.png">
+      <img alt="pack of dogs" class="frontPage-about-dogs" src="./../assets/dogs-three.png">
       <div class="frontPage-about-text">
         <h3>O naszym schronisku</h3>
         <p>
