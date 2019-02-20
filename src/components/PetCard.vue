@@ -1,7 +1,7 @@
 <template>
   <div class="petCard-container white-box">
     <div class="petCard-image">
-      <img :src="image">
+      <img @click="showDetails" :src="image">
     </div>
     <h5 class="petCard-name">{{this.pet.name}}</h5>
     <button @click="showDetails" class="petCard-button main-button">Więcej</button>

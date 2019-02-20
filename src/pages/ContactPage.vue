@@ -1,17 +1,17 @@
 <template>
-  <article class="page">
+  <main id="page-anchor" class="page">
     <h3>Dane kontaktowe</h3>
-    <section>
+    <article>
       <h4>Numery telefonów</h4>
       <a href="tel:0322563415">tel/fax: 032 256 34 15</a>
       <a href="tel:601462399">tel. dyżurny: 601 46 23 99</a>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Adres email</h4>
       <a
         href="mailto:schronisko.katowice@gmail.com?subject=Drogie schronisko"
       >schronisko.katowice@gmail.com</a>
-    </section>
+    </article>
     <div class="contactPage-openhours">
       <h4 class="contactPage-openhours-header">Godziny otwarcia</h4>
       <b class="contactPage-openhours-mon-frd">poniedziałek-piątek:</b>
@@ -19,15 +19,15 @@
       <b class="contactPage-openhours-sunday">sobota:</b>
       <span class="contactPage-openhours-sunday-hours">od 7:00 do 14:00</span>
     </div>
-    <section class="contactPage-openhours">
+    <article>
       <!--TODO: insert map here-->
-      <h4 class="contactPage-openhours-header">Gdzie jesteśmy</h4>
+      <h4>Gdzie jesteśmy</h4>
       <a
         target="_blank"
         href="https://www.google.com/maps/place/Milowicka+1B,+40-001+Katowice/data=!4m2!3m1!1s0x4716d024d9bfef3d:0xc5d1381f723a7b96?ved=2ahUKEwj44aTRvp3gAhXr-yoKHWuVAMwQ8gEwAHoECAAQAQ"
       >Zobacz na mapie</a>
-    </section>
-  </article>
+    </article>
+  </main>
 </template>
 
 <script>

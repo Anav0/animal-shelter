@@ -1,8 +1,8 @@
 <template>
-  <div class="petsPage-container">
+  <main id="page-anchor" class="petsPage-container">
     <h3 class="petsPage-header">Nasi przyjaciele którzy szukają domu</h3>
     <router-view :key="$route.fullPath"></router-view>
-  </div>
+  </main>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="frontPage-container">
+  <main class="frontPage-container">
     <!--Adopt section-->
     <section class="frontPage-adopt fullscreen">
       <h3>Nie tylko ludzie potrzebują domu</h3>
@@ -82,7 +82,7 @@
         ></IconAndText>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>

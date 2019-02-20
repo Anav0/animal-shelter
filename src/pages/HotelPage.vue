@@ -1,7 +1,7 @@
 <template>
-  <article class="page">
+  <main id="page-anchor" class="page">
     <h3>Hotel</h3>
-    <section>
+    <article>
       <h4>O hotelu</h4>
       <p>
         Wychodząc naprzeciw zapotrzebowaniu mieszkańców stworzyliśmy miejsce, gdzie przyjmujemy odpłatnie psy na przechowanie.
@@ -10,8 +10,8 @@
         W czasie pobytu psy są trzykrotnie w ciągu dnia wypuszczany na wybieg (jeśli jest konieczność psy wyprowadzane są na smyczy).
         Zwierzęta karmimy suchą karmą, puszkami, jedzeniem gotowanym.
       </p>
-    </section>
-    <section>
+    </article>
+    <article>
       <h4>Warunki przyjęcia do hotelu</h4>
       <ul>
         <li>Pies musi mieć ukończone 12 miesięcy</li>
@@ -25,8 +25,8 @@
         <li>Rezerwacji można dokonać osobiście lub telefonicznie</li>
         <li>Cena za dobę w 2017 roku wynosi 12,00 zł</li>
       </ul>
-    </section>
-  </article>
+    </article>
+  </main>
 </template>
 
 <script>

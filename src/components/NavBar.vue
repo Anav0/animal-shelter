@@ -14,16 +14,16 @@
     <div class="navbar-menu">
       <router-link class="navbar-item" to="/" exact>O schronisku</router-link>
       <div class="navbar-item dropdown">
-        <router-link class="navbar-item" to="/pets">Nasze zwierzaki</router-link>
+        <router-link class="navbar-item" to="/pets#page-anchor">Nasze zwierzaki</router-link>
         <div class="dropdown-content">
-          <router-link class="navbar-item" to="/pets/dogs">Psy</router-link>
-          <router-link class="navbar-item" to="/pets/cats">Koty</router-link>
+          <router-link class="navbar-item" to="/pets/dogs#page-anchor">Psy</router-link>
+          <router-link class="navbar-item" to="/pets/cats#page-anchor">Koty</router-link>
         </div>
       </div>
-      <router-link class="navbar-item" to="/adoption">Adopcja</router-link>
-      <router-link class="navbar-item" to="/hotel">Hotel</router-link>
-      <router-link class="navbar-item" to="/help">Pomoc</router-link>
-      <router-link class="navbar-item" to="/contact">Kontakt</router-link>
+      <router-link class="navbar-item" to="/adoption#page-anchor">Adopcja</router-link>
+      <router-link class="navbar-item" to="/hotel#page-anchor">Hotel</router-link>
+      <router-link class="navbar-item" to="/help#page-anchor">Pomoc</router-link>
+      <router-link class="navbar-item" to="/contact#page-anchor">Kontakt</router-link>
     </div>
   </nav>
 </template>
