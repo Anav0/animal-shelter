@@ -17,25 +17,10 @@ export function call(config) {
     });
 }
 
-export function isAuth() {
-  const config = {
-    method: "get",
-    withCredentials: true,
-    url: "check",
-    data: {}
-  };
-  return call(config).then(response => {
-    if (response.status == 200) {
-      return true;
-    }
-    return false;
-  });
-}
-
 export function getRandomUnsplashImages(query, count = 1) {
   var url = `${unsplash.baseUrl}photos/random?client_id=${
     unsplash.key
-  }&count=${count}`;
+    }&count=${count}`;
 
   if (query) url = url.concat(`&query=${query}`);
 
